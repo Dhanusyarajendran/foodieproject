@@ -46,14 +46,14 @@ const Banner = () => {
 
 
                     <form onSubmit={handleSearch} className='relative max-w-2xl mx-auto md:mx-0 group'>
-                        <div className='relative flex items-center bg-amber-700/30 rounded-xl border-2 border-amber-500 shadow-2xl hover:bg-amber-400/50 transition-all duration-300'>
-                            <div className='pl-6 pr-3 py-4'>
+                        <div className='relative flex items-center bg-amber-700/30 rounded-xl border-2 border-amber-700/50 shadow-2xl hover:bg-amber-400/50 transition-all duration-300'>
+                            <div className='pl-6 pr-3 py-3'>
                                 <FaSearch className='text-xl text-amber-400/80'/>
                             </div>
                             <input type='text' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} placeholder='Discover your next fav meal...
                             'className='w-full py-2  bg-transparent outline-none placehoder-amber-200/70 text-lg 
                             font-medium tracking-wide text-sm' /> 
-                            <button type='submit' className='mr-3 px-6 py-2 bg-gradient-to-r from bg-amber-400 to bg-amber-300
+                            <button type='submit' className='mr-3 px-6 py-1 bg-gradient-to-r from bg-amber-400 to bg-amber-300
                             rounded-lg font-semibold text-amber-900 hover:from-amber-300 hover:to-amber-200
                             transition-all duration-300 shadow-lg hover:shadow-amber-300/20'>Search</button>
                         </div>

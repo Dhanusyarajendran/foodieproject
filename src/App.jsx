@@ -7,6 +7,7 @@ import Contact from './Pages/Contact/Contact.jsx';
 import Cart from './Pages/Cart/Cart.jsx';
 import SignUp from './Component/Sign Up/SignUp.jsx'
 
+
 const App = () => {
   return (
   
