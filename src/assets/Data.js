@@ -11,6 +11,7 @@ import paneerTikka from './paneerTikka.png';
 import masalaDosa from './masalaDosa.png';
 import palakPaneer from './palakpaneer.png';
 import gulabJamun from './gulabJamun.png';
+import {  FaBolt,FaRegClock, FaCalendarCheck, FaFire} from 'react-icons/fa';
 
 import video from './video.mp4';
 
@@ -62,7 +63,7 @@ export const cardData = [
   },
 ];
 
-
+//aditional data
 export const additionalData = [
   {
     id: 5,
@@ -96,4 +97,32 @@ export const additionalData = [
     description: 'Golden dumplings in rose syrup',
     image: gulabJamun,
   },
+];
+
+//for homeabout 
+export const aboutfeature = [
+    {
+        icon: FaBolt,
+        title: "Instant Ordering",
+        text: "Seamless digital experience",
+        color: "from-amber-400 to-orange-500"
+    },
+    {
+        icon: FaRegClock,
+        title: "Always Open",
+        text: "24/7 premium service",
+        color: "from-rose-400 to-pink-600"
+    },
+    {
+        icon: FaCalendarCheck,
+        title: "Exclusive Booking",
+        text: "Priority reservations",
+        color: "from-emerald-400 to-cyan-600"
+    },
+    {
+        icon: FaFire,
+        title: "Signature Dishes",
+        text: "Chef's special creations",
+        color: "from-purple-400 to-indigo-600"
+    }
 ];

@@ -53,8 +53,9 @@ const SpecialOffer = () => {
             </div>
 
             <div className='py-5 px-3 relative z-10'>
-              <h3 className='text-xl font-bold mb-2 bg-gradient-to-br from-amber-300 to-amber-500 bg-clip-text 
-              text-transparent font-[playfair_Display] italic '>{item.title}</h3>
+              <h3 className='text-xl font-bold mb-2 text-amber-300 font-[playfair_Display] italic'>
+                {item.title}
+              </h3>
               <p className='text-sm text-gray-300 leading-relaxed tracking-wide mb-4 truncate'>{item.description}</p>
 
               <div className='flex items-center justify-between'>
