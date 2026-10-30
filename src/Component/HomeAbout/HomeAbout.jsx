@@ -85,6 +85,7 @@ const HomeAbout = () => {
 </div>
 </div>
 <FloatingParticle />
+<div className='mb-10' />
     </div>
   )
 }
