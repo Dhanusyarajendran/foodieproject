@@ -58,6 +58,7 @@ const Banner = () => {
                             transition-all duration-300 shadow-lg hover:shadow-amber-300/20'>Search</button>
                         </div>
                     </form>
+                    
                     <div className='flex flex-wrap gap-4 justify-center md:justify-start mt-6'>
                         <button className='group flex items-center gap-3 bg-amber-800/30 hover:bg-amber-800/50 px-5 py-2 rounded-xl duration-300 transition-all
                          border-2 border-amber-700/50 hover:border-amber-400 '>

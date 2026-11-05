@@ -44,6 +44,7 @@ import PaneerButterMasala from './PaneerButterMasala.png';
 import ChickenTacos from './ChickenTacos.png';
 import WhiteSaucePasta from './WhiteSaucePasta.png';
 import {  FaBolt,FaRegClock, FaCalendarCheck, FaFire} from 'react-icons/fa';
+import { FaFacebookF as FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 import video from './video.mp4';
 
@@ -457,4 +458,12 @@ export const dummyMenuData = {
         
     ]
 
-};
+    };
+
+    //social media links
+    export const socialIcons = [
+    { icon: FaFacebook, link: 'https://www.facebook.com/share/1DjbwhdR4z/', color: '#3b5998', label: 'Facebook' },
+    { icon: FaInstagram, link: 'https://www.instagram.com/hexagondigitalservices?igsh=MWl1nanQ2eXIycnRkZQ==', color: '#E1306C', label: 'Instagram' },
+    { icon: FaXTwitter, link: 'https://x.com/HexagonDService?t=Vv5ReZAIbXONqkq_00ksWQ&s=09', color: '#000', label: 'X' },
+    { icon: FaYoutube, link: 'https://youtube.com/@hexagondigitalservices?si=UnBt0AHI-ChN5Mze', color: '#FF0000', label: 'Youtube' }
+];
