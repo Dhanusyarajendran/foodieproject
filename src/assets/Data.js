@@ -43,10 +43,14 @@ import ChickenBiryani from './ChickenBiryani.png';
 import PaneerButterMasala from './PaneerButterMasala.png';
 import ChickenTacos from './ChickenTacos.png';
 import WhiteSaucePasta from './WhiteSaucePasta.png';
-import {  FaBolt,FaRegClock, FaCalendarCheck, FaFire} from 'react-icons/fa';
+import {  FaBolt,FaRegClock, FaCalendarCheck, FaFire, FaHeart} from 'react-icons/fa';
 import { FaFacebookF as FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6';
-
+import IA1 from './instant.png';
+import IA2 from './master.png';
+import IA3 from './premium.png';
 import video from './video.mp4';
+import {FaShippingFast, FaLeaf } from 'react-icons/fa';
+import {GiChefToque, GiFoodTruck} from 'react-icons/gi';
 
 export const bannerAssests = {
 	banner: herosection,
@@ -466,4 +470,97 @@ export const dummyMenuData = {
     { icon: FaInstagram, link: 'https://www.instagram.com/hexagondigitalservices?igsh=MWl1nanQ2eXIycnRkZQ==', color: '#E1306C', label: 'Instagram' },
     { icon: FaXTwitter, link: 'https://x.com/HexagonDService?t=Vv5ReZAIbXONqkq_00ksWQ&s=09', color: '#000', label: 'X' },
     { icon: FaYoutube, link: 'https://youtube.com/@hexagondigitalservices?si=UnBt0AHI-ChN5Mze', color: '#FF0000', label: 'Youtube' }
+];
+
+//about page data 
+export const features = [
+    {
+        id: 1,
+        title: "Instant Delivery",
+        text: "30-minute delivery guarantee in metro areas",
+        icon: FaShippingFast, // store the component reference
+        img: IA1,
+    },
+    {
+        id: 2,
+        title: "Master Chefs",
+        text: "Michelin-star trained culinary experts",
+        icon: GiChefToque,
+        img: IA2,
+    },
+    {
+        id: 3,
+        title: "Premium Quality",
+        text: "Locally sourced organic ingredients",
+        icon: FaLeaf,
+        img: IA3,
+    },
+];
+
+export const stats = [
+    {
+        number: '10M+',
+        label: 'Deliveries',
+        icon: GiFoodTruck,
+        gradient: 'from-amber-500 via-orange-400 to-yellow-600',
+    },
+    {
+        number: '98%',
+        label: 'Satisfaction',
+        icon: FaHeart,
+        gradient: 'from-rose-500 via-amber-500 to-yellow-500',
+    },
+    {
+        number: '500+',
+        label: 'Cities',
+        icon: FaLeaf,
+        gradient: 'from-emerald-500 via-amber-500 to-yellow-600',
+    },
+    {
+        number: '24/7',
+        label: 'Support',
+        icon: FaRegClock,
+        gradient: 'from-amber-500 via-orange-400 to-rose-500',
+    },
+];
+export const teamMembers = [
+  {
+    name: "Marco Yansen",
+    role: "Executive Chef",
+    img: image1,
+    bio: "3 Michelin stars | Italian cuisine specialist",
+    delay: 0.1,
+    social: {
+      twitter: "https://x.com/?lang=en",
+      instagram: "https://www.instagram.com/",
+      facebook: "https://www.facebook.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
+  },
+  {
+    name: "Amit Singh",
+    role: "Pastry Chef",
+    img: image2,
+    bio: "World Baking Champion | French desserts expert",
+    delay: 0.3,
+    social: {
+      twitter: "https://x.com/?lang=en",
+      instagram: "https://www.instagram.com/",
+      facebook: "https://www.facebook.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
+  },
+  {
+    name: "Akash Trivedi",
+    role: "Sushi Chef",
+    img: image3,
+    bio: "5th generation sushi chef | Traditional techniques",
+    delay: 0.5,
+    social: {
+      twitter: "https://x.com/?lang=en",
+      instagram: "https://www.instagram.com/",
+      facebook: "https://www.facebook.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
+  },
 ];
