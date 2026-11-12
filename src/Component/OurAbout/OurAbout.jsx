@@ -24,8 +24,9 @@ const OurAbout = () => {
             </div>
             </motion.section>
 
+
            
-           <section className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+           <section className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='mx-auto grid max-w-6xl grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3'>
                  {features.map((feat, index)=>{
                     const Icon = feat.icon; // Get the icon component from the feature object
@@ -36,7 +37,7 @@ const OurAbout = () => {
                     className='flex flex-col items-center text-center bg-[#3c2a21] rounded-2xl shadow-xl shadow-black/30 hover:shadow-amber-500/30 transition-all duration-300'>    
                     <div className='relative bg-[#3c2a21] backdrop-blur-lg w-full rounded-2xl overflow-hidden shadow-lg
                      border border-amber-600/30 hover:border-amber-500 transition-all duration-300'>
-                        <div className='relative h-60 overflow-hidden'>
+                        <div className='relative h-54 overflow-hidden'>
                         <motion.img src={feat.img} alt={feat.title} initial={{scale:1}}
                         whileHover={{scale:1.05}} transition={{duration:0.4}} className='block h-80 w-full object-cover object-center'/>
                         <div className='absolute inset-0 bg-gradient-to-t from-[#1a120b] to-transparent opacity-70' />
@@ -57,6 +58,9 @@ const OurAbout = () => {
         })}
             </div>
            </section>
+
+
+
 
             <section className='bg-gradient-to-br from-[#1a120b] to-[#3c2a21]/90 py-20'>
                <div className='mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8'>
@@ -82,7 +86,48 @@ const OurAbout = () => {
                                 delay : index * 0.3
                             }
                         }}>
-                            <div className='h-full rounded-2xl border border-amber-600/30 bg-[#3c2a21]/60 shadow-xl shadow-black/30 transition-all duration-300 group-hover:border-amber-500/70 group-hover:shadow-amber-500/20' />
+
+                            <div className='h-full p-6 rounded-2xl border border-amber-600/30 bg-[#3c2a21]/60 
+                            shadow-xl shadow-black/30 transition-all duration-300 group-hover:border-amber-500/70 group-hover:shadow-amber-500/20' />
+                        <motion.div className='absolute inset-0 rounded-xl'
+                        animate={{
+                            background: [
+                                'linear-gradient(45deg, #3c2a21 0%, #1a120b 50%, #3c2a21 100%)',
+                                'linear-gradient(45deg, #3c2a21 0%, #1a120b 80%, #3c2a21 100%)',
+                                'linear-gradient(45deg, #3c2a21 0%, #1a120b 50%, #3c2a21 100%)'
+                            ]
+                        }} transition={{
+                            duration: 6,
+                            repeat: Infinity,
+                        }}>
+                            <div className='absolute inset-0 rounded-xl shadow-lg shadow-amber-900/20'/>
+
+
+                            <div className='absolute inset-0 z-10 flex flex-col items-center justify-center text-center'>
+                                <motion.div className='p-3 mb-4 rounded-full bg-amber-900/30 border border-amber-50/20'
+                                whileHover={{ scale: 1.1, rotate: 10 }}>
+                                <Icon className='h-9 w-9 text-amber-400' aria-hidden='true' />
+                                </motion.div>
+
+                                <div className='text-2xl font-bold mb-1 bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400 text-transparent'>
+                                    {stat.number}
+                                </div>
+
+                                <motion.div className ='text-sm uppercase tracking-widest font-medium text-amber-100/80'
+                                animate = {{
+                                    letterSpacing : hoveredStat === index ? '0.15em' : '0.1em',
+                                    textShadow : hoveredStat === index ? '0 0 8px rgba(245, 158, 11, 0.4)' : 'none',
+                                    color : hoveredStat === index ? '#facc15' : '#fbbf24',
+                                }}
+                                >
+                                    {stat.label}
+
+                                </motion.div>
+                                 
+                            </div>
+
+                        </motion.div>
+                        
                         </motion.div>
                     </motion.div>
                   )
@@ -91,6 +136,16 @@ const OurAbout = () => {
                 </div>
             </section>
 
+
+             <section className='py-16 px-4 md:px-8 relative'>
+                <div className='max-w-4xl mx-auto text-center'>
+                    <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} 
+                     className='text-4xl font-serif sm:text-5xl md:text-6xl font-bold text-center
+                      mb-12 text-amber-100'>
+                        Meet Our <span className='text-amber-500'>Culinary Artists</span>
+                    </motion.h2>
+                </div>
+             </section>
         </div>
     </div>
   )
