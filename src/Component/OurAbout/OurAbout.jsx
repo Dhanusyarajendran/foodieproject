@@ -144,11 +144,19 @@ const OurAbout = () => {
                       mb-12 text-amber-100'>
                         Meet Our <span className='text-amber-500'>Culinary Artists</span>
                     </motion.h2>
+
+                    <div className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+                        {teamMembers.map((team, index) =>(
+                            <div className='h-64'>
+                                <motion.img src={team.teamimage} alt={team.name} className='w-full h-full rounded-lg shadow-lg object-cover' />
+                            </div>
+                        ))}
+                    </div>
                 </div>
              </section>
         </div>
     </div>
   )
-}
+} 
 
 export default OurAbout

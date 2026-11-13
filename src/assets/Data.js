@@ -51,6 +51,10 @@ import IA3 from './premium.png';
 import video from './video.mp4';
 import {FaShippingFast, FaLeaf } from 'react-icons/fa';
 import {GiChefToque, GiFoodTruck} from 'react-icons/gi';
+import teamimg1 from './teamimg1.png';
+import teamimg2 from './teamimg2.png';
+import teamimg3 from './teamimg3.png';
+
 
 export const bannerAssests = {
 	banner: herosection,
@@ -527,7 +531,7 @@ export const teamMembers = [
   {
     name: "Marco Yansen",
     role: "Executive Chef",
-    img: image1,
+    teamimage: teamimg1,
     bio: "3 Michelin stars | Italian cuisine specialist",
     delay: 0.1,
     social: {
@@ -540,7 +544,7 @@ export const teamMembers = [
   {
     name: "Amit Singh",
     role: "Pastry Chef",
-    img: image2,
+     teamimage: teamimg2,
     bio: "World Baking Champion | French desserts expert",
     delay: 0.3,
     social: {
@@ -553,7 +557,7 @@ export const teamMembers = [
   {
     name: "Akash Trivedi",
     role: "Sushi Chef",
-    img: image3,
+    teamimage: teamimg3,
     bio: "5th generation sushi chef | Traditional techniques",
     delay: 0.5,
     social: {
