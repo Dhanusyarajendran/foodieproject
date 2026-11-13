@@ -12,7 +12,7 @@ const OurAbout = () => {
     relative'>
         <div>
           <motion.section initial={{opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} 
-          className='py-16 px-4 text-center relative'>
+          className='relative mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8'>
             <div className='max-w-4xl mx-auto'>
                 <motion.h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 font-serif text-amber-50
                 bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-600'>
@@ -26,8 +26,8 @@ const OurAbout = () => {
 
 
            
-           <section className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20'>
-            <div className='mx-auto grid max-w-6xl grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3'>
+           <section className='relative mx-auto mb-20 max-w-7xl px-4 sm:px-6 lg:px-8'>
+            <div className='mx-auto grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3'>
                  {features.map((feat, index)=>{
                     const Icon = feat.icon; // Get the icon component from the feature object
                     return(
@@ -137,19 +137,30 @@ const OurAbout = () => {
             </section>
 
 
-             <section className='py-16 px-4 md:px-8 relative'>
-                <div className='max-w-4xl mx-auto text-center'>
+             <section className='relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
+                <div className='text-center'>
                     <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} 
                      className='text-4xl font-serif sm:text-5xl md:text-6xl font-bold text-center
                       mb-12 text-amber-100'>
                         Meet Our <span className='text-amber-500'>Culinary Artists</span>
                     </motion.h2>
 
-                    <div className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+                    <div className = 'grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3'>
                         {teamMembers.map((team, index) =>(
-                            <div className='h-64'>
-                                <motion.img src={team.teamimage} alt={team.name} className='w-full h-full rounded-lg shadow-lg object-cover' />
+                            <motion.div key={team.name} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "0px 0px -100px 0px" }} transition={{ delay:team.delay}}
+                            className='relative group'>
+                          
+                            <div className='relative w-full h-64 sm:h-72 md:h-96 overflow-hidden rounded-b-2xl'>
+                                <motion.img src={team.teamimage} alt={team.name} className='block h-full w
+                            <div className='relative h-full overflow-hidden rounded-2xl border-2 border-amber-500/70 bg-[#241910] shadow-lg shadow-black/30 transition-all duration-300 hover:shadow-amber-500/30' key={team.name}>
+                              <div className='relative h-64 sm:h-72 md:h-96 overflow-hidden'>
+                                <motion.img src={team.teamimage} alt={team.name} className='block h-auto w-full object-contain'
+                                initial={{scale: 1}} whileHover={{scale: 1.1}} transition={{duration: 0.5}} />
+                             </div>
                             </div>
+                            
+                            </motion.div>
                         ))}
                     </div>
                 </div>
