@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
-import { motion, scale } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { features, stats, teamMembers } from '../../assets/Data';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+
+const socialIcons = {
+    twitter: FaTwitter,
+    instagram: FaInstagram,
+    facebook: FaFacebook,
+    linkedin: FaLinkedin,
+};
 
 const OurAbout = () => {
 
@@ -150,18 +158,47 @@ const OurAbout = () => {
                             <motion.div key={team.name} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "0px 0px -100px 0px" }} transition={{ delay:team.delay}}
                             className='relative group'>
-                          
-                            <div className='relative w-full h-64 sm:h-72 md:h-96 overflow-hidden rounded-b-2xl'>
-                                <motion.img src={team.teamimage} alt={team.name} className='block h-full w
-                            <div className='relative h-full overflow-hidden rounded-2xl border-2 border-amber-500/70 bg-[#241910] shadow-lg shadow-black/30 transition-all duration-300 hover:shadow-amber-500/30' key={team.name}>
+                            <div className='relative h-full overflow-hidden rounded-2xl border-2 border-amber-500/70 bg-[#3c2a21] backdrop-blur-lg shadow-lg transition-all duration-300 hover:shadow-amber-500/30'>
+                             {/*for image */}
                               <div className='relative h-64 sm:h-72 md:h-96 overflow-hidden'>
                                 <motion.img src={team.teamimage} alt={team.name} className='block h-auto w-full object-contain'
                                 initial={{scale: 1}} whileHover={{scale: 1.1}} transition={{duration: 0.5}} />
                              </div>
+
+                             <div className='px-2 py-4 flex flex-col'>
+                                <h3 className='text-amber-100 font-bold text-2xl'>{team.name}</h3>
+                                <p className='text-amber-500 font-cursive'>{team.role}</p>
+                                 <div className='py-4'>
+                                <p className='font-cursive text-sm text-amber-100/60'>{team.bio}</p>
+                             </div>
+                             <motion.div className='flex gap-4 text-amber-500 justify-center' 
+                             initial={{scale: 0}} whileInView={{scale: 1}}>
+                                {Object.entries(team.social).map(([icons, url]) => {
+                                    const Icon = socialIcons[icons];
+
+                                    return (
+                                        <a
+                                            key={icons}
+                                            href={url}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            aria-label={`${team.name} on ${icons}`}
+                                            className='transition-colors hover:text-amber-300 text-center'
+                                        >
+                                            <Icon aria-hidden='true' className='text-xl' />
+                                        </a>
+                                    );
+                                })}
+                             </motion.div>
+                             </div>
+                            
+                       
                             </div>
                             
                             </motion.div>
+                            
                         ))}
+
                     </div>
                 </div>
              </section>
