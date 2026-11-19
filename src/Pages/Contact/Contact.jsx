@@ -1,12 +1,13 @@
 import React from 'react'
-import Navbar from '../../Component/Navbar/Navbar'
+import Navbar from '../../Component/Navbar/Navbar';
+import Contactpage from '../../Component/Contactpage/Contactpage';
 
 const Contact = () => {
   return (
     <>
     <Navbar />
     <div>
-        Contact
+        <Contactpage />
     </div>
     </>
   )
